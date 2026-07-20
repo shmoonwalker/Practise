@@ -10,7 +10,7 @@ RUN ./mvnw --batch-mode dependency:go-offline
 
 COPY src/ src/
 
-RUN ./mvnw --batch-mode clean package -DskipTests
+RUN ./mvnw --batch-mode clean verify
 
 
 FROM eclipse-temurin:25-jre
