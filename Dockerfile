@@ -17,8 +17,6 @@ FROM eclipse-temurin:25-jre
 
 WORKDIR /app
 
-ENV SPRING_PROFILES_ACTIVE=prod
-
 COPY --from=build /app/target/*.jar app.jar
 
 EXPOSE 8080
